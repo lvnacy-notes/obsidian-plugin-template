@@ -156,6 +156,30 @@ export default defineConfig([
 			'@typescript-eslint/prefer-nullish-coalescing': 'error',
 			'@typescript-eslint/prefer-optional-chain': 'error',
 			'@typescript-eslint/no-unnecessary-type-assertion': 'error',
+			'@stylistic/list-style': [
+				'error',
+				{
+					singleLine: {
+						spacing: 'never',
+						maxItems: 2
+					},
+					multiLine: {
+						minItems: 3
+					},
+					overrides: {
+						'{}': {
+							singleLine: {
+								spacing: 'always'
+							}
+						},
+						'TSInterfaceBody': {
+							multiLine: {
+								minItems: 0
+							}
+						}
+					}
+				}
+			]
 		},
 	},
 	{
